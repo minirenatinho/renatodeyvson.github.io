@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renatodeyvson.com.br/sitemap.xml
