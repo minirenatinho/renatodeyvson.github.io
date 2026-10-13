@@ -1,0 +1,70 @@
+/* Résumé (A4), printed to pdf/ with headless Chrome — see CLAUDE.md */
+
+:root {
+  --text: #141a22;
+  --muted: #5a6573;
+  --rule: #d5dbe1;
+  --heading: #1e3a5f;   /* navy: section titles and the role line */
+  --link: #1f5fad;
+}
+
+@page { size: A4; margin: 14mm 16mm; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.33px;
+  line-height: 18px;
+  color: var(--text);
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+a { color: var(--link); text-decoration: none; }
+.muted { color: var(--muted); }
+
+/* Header */
+h1 { font-size: 26.66px; line-height: 36px; font-weight: 700; }
+.role { margin-top: 2px; font-size: 14.66px; line-height: 20px; color: var(--heading); }
+.contact { margin-top: 7px; font-size: 12.66px; line-height: 19px; color: var(--muted); }
+
+/* Sections */
+section { margin-top: 18px; }
+header + section { margin-top: 17px; }
+h2 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--heading);
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 7px;
+  break-after: avoid;
+}
+.lines p + p { margin-top: 2px; }
+
+/* Experience */
+.org + .org { margin-top: 11.5px; }
+.org > h3 { font-size: 14.66px; line-height: 21px; break-after: avoid; }
+h3 .muted, h4 .muted { font-weight: 400; }
+.note { font-size: 12.66px; font-style: italic; color: var(--muted); }
+.job { margin-top: 5px; break-inside: avoid; }
+.job > h4 { font-size: 13.33px; break-after: avoid; }
+.org > .note + .job { margin-top: 6px; }
+ul { padding: 1px 0 0 1.6em; }
+li { margin-top: 2px; }
+
+/* Projects, education */
+.projects p + p { margin-top: 2.5px; }
+.projects p.more { margin-top: 4px; font-size: 12.66px; color: var(--muted); }
+.small { font-size: 12.66px; }
+
+/* On screen, show a sheet of A4 paper */
+@media screen {
+  html { background: #e8eaed; }
+  body { width: 210mm; min-height: 297mm; margin: 0 auto 24px; padding: 14mm 16mm; box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+}

@@ -6,9 +6,10 @@
 	--ink: #141a22;
 	--muted: #5a6573;
 	--border: #e1e5ea;
-	--accent: #0e7a6e;
+	--accent: #1e3a5f;
 	--accent-ink: #ffffff;
-	--accent-soft: rgba(14, 122, 110, 0.08);
+	--accent-soft: rgba(30, 58, 95, 0.07);
+	--link: #1f5fad;
 	--status: #16a34a;
 	--shadow: 0 1px 2px rgba(20, 26, 34, 0.04), 0 10px 28px rgba(20, 26, 34, 0.07);
 	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -25,9 +26,10 @@
 		--ink: #e7ecf2;
 		--muted: #97a3b2;
 		--border: #232c38;
-		--accent: #5bd0bf;
+		--accent: #9dbbe3;
 		--accent-ink: #0c1016;
-		--accent-soft: rgba(91, 208, 191, 0.09);
+		--accent-soft: rgba(157, 187, 227, 0.09);
+		--link: #6ea8fe;
 		--status: #4ade80;
 		--shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.3);
 	}
@@ -65,7 +67,7 @@ img {
 }
 
 a {
-	color: var(--accent);
+	color: var(--link);
 	text-decoration: none;
 }
 
@@ -224,15 +226,11 @@ h4 {
 	gap: 56px;
 }
 
-.eyebrow,
-.section-kicker {
+.eyebrow {
+	margin-bottom: 12px;
 	font-family: var(--font-mono);
 	font-size: 0.82rem;
 	color: var(--accent);
-}
-
-.eyebrow {
-	margin-bottom: 12px;
 }
 
 .hero h1 {
@@ -339,10 +337,6 @@ h4 {
 
 .section-head {
 	margin-bottom: 32px;
-}
-
-.section-kicker {
-	margin-bottom: 6px;
 }
 
 .section h2 {
@@ -653,11 +647,7 @@ h4 {
 	border-radius: 20px;
 }
 
-.contact-card .section-kicker {
-	margin-bottom: -12px;
-}
-
-.contact-card p:not(.section-kicker) {
+.contact-card p {
 	max-width: 56ch;
 	color: var(--muted);
 }
